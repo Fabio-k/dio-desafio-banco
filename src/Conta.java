@@ -9,11 +9,13 @@ public abstract class Conta {
     protected String agencia;
     protected int numero;
     protected String tipoConta = "Conta";
+    protected Cliente cliente;
 
-    public Conta() {
+    public Conta(Cliente cliente) {
         this.agencia = AGENCIA_PADRAO;
         this.numero = SEQUENTIAL++;
         this.saldo = 0;
+        this.cliente = cliente;
     }
 
     public String getAgencia() {
